@@ -55,4 +55,3 @@
     function displayError() {
         weatherSection.innerHTML = `<h2>Location not found</h2>`;
     }
-});
