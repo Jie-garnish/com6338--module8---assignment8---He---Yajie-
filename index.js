@@ -1,6 +1,6 @@
 // Your code here
 
-document.addEventListener("DOMContentLoaded", function () {
+
     const form = document.querySelector("form");
     const input = document.querySelector("#weather-search");
     const weatherSection = document.querySelector("#weather");
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const response = await fetch(fetchURL);
             const data = await response.json();
-            if (response.ok) {
+            if(response.status === 200) {
                 displayWeather(data);
             } else {
                 displayError();
